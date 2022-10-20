@@ -10,22 +10,22 @@
     - name: Languages
       value: English, Turkish, German
 
-- title: Experience
-  type: time_table
-  contents:
-    - title: Graduate Research Assistant
-      institution: Center of Data Sceience, New York University
-      year: 2021 - 
-      description:
-        - title: Co-author in Holo-Dex, (in submission, ICRA 2022) (https://arxiv.org/abs/2210.06463). A mixed-reality framework for learning
-        dexterous manipulation policies. 
-          contents: 
-            - We use VR headsets and ROS to collect demonstrations. 
-            - Self-supervised learning algorithms to train encoders. 
-            - Nearest neighbor matching to learn policies to tackle dexterous tasks.
-        - title: Experimented on a state / vision based framework for a robot to manipulate objects.
-          contents:
-            - Used Aruco Markers to 
+# - title: Experience
+#   type: time_table
+#   contents:
+#     - title: Graduate Research Assistant
+#       institution: Center of Data Sceience, New York University
+#       year: 2021 - 
+#       description:
+#         - title: Co-author in Holo-Dex, (in submission, ICRA 2022) (https://arxiv.org/abs/2210.06463). A mixed-reality framework for learning
+#         dexterous manipulation policies. 
+#           contents: 
+#             - We use VR headsets and ROS to collect demonstrations. 
+#             - Self-supervised learning algorithms to train encoders. 
+#             - Nearest neighbor matching to learn policies to tackle dexterous tasks.
+#         - title: Experimented on a state / vision based framework for a robot to manipulate objects.
+#           contents:
+#             - Used Aruco Markers to 
 
 - title: Education
   type: time_table
