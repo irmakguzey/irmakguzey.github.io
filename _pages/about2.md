@@ -2,15 +2,15 @@
 layout: about
 title: About Me
 permalink: /
-subtitle: Graduate Research Assistant, Fulbright Scholar - +16467449227 - ig2283@nyu.edu - she/her 
+subtitle: Graduate Research Assistant and a Fulbright Scholar in New York University - ig2283@nyu.edu - she/her 
 
 profile:
   align: right
   image: profile_photo.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>3544 Broadway</p>
-    <p>New York, NY, 10031</p>
+    <p>3544 Broadway Apt 28</p>
+    <p>New York, NY, 10031, United States</p>
 
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
