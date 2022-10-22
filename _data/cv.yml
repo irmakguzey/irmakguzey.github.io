@@ -17,8 +17,7 @@
       institution: Center of Data Sceience, New York University
       year: 2021
       description:
-        - title: Co-author in Holo-Dex, (in submission, ICRA 2022) (https://arxiv.org/abs/2210.06463). A mixed-reality framework for learning
-        dexterous manipulation policies. 
+        - title: Co-author in Holo-Dex, (in submission, ICRA 2022) (https://arxiv.org/abs/2210.06463). A mixed-reality framework for learning dexterous manipulation policies. 
           contents: 
             - We use VR headsets and ROS to collect demonstrations. 
             - Self-supervised learning algorithms to train encoders. 
