@@ -23,12 +23,12 @@ Github page, Linkedin link, google scholar (? - maybe not for now) -->
 
 <!-- TODO: Linkleri ekle -->
 
-I am a second year masters student in New York University studying Computer Science at Courant Institute of Mathematical Sciences. I was awarded with a [Fulbright scholarship]() in 2020. 
+I am a second year masters student in New York University studying Computer Science at Courant Institute of Mathematical Sciences. I was awarded with a Fulbright scholarship in 2020. 
 I currently work as a graduate research assistant in Computational Intelligence, Vision, and Robotics Lab ([CILVR](https://wp.nyu.edu/cilvr/)) at NYU and am lucky to be advised by [Prof. Lerrel Pinto](https://www.lerrelpinto.com/).
 
 My research mostly focus on Robot Learning and Representation Learning. I enjoy working on tackling different tasks in Manipulation and Navigation in Robotics.
 
-On top of my research, with my interest in Robotics and Machine Learning, I worked as a full-time robotics engineer in [DOF Robotics]() for a year, had an internship in [X](), and 2 different internships in [Google](), one of them being purely on machine learning.
+On top of my research, with my interest in Robotics and Machine Learning, I worked as a full-time robotics engineer in [DOF Robotics](https://dofrobotics.com/) for a year, had an internship in [X](https://x.company/) - the Moonshot Factory and 2 different internships in [Google](https://about.google/), one of them being purely on machine learning.
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
