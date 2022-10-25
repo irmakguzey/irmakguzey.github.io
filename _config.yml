@@ -8,7 +8,7 @@ middle_name:
 last_name: Guzey
 email: ig2283@nyu.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A graduate research assistant in New York University. I am interested in robot learning, computer vision and machine learning in general.
+  A graduate research assistant in New York University.
 # footer_text: >
 #   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
 #   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
