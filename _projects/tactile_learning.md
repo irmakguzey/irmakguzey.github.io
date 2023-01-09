@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Dexterous Manipulation with Tactile Information
-description: 
+title: Tactile Learning
+description: Dexterous Manipulation with Tactile Information
 img: assets/img/xela_allegro.png
 importance: 1
 category: work
