@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Dawge
+title: Quadruped Manipulation
 description: Manipulation with a Quadruped Robot
 img: assets/img/dawge.jpeg
 importance: 2
