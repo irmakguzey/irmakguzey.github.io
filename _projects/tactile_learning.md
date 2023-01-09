@@ -1,17 +1,24 @@
 ---
 layout: page
-title: project 1
-description: a project with a background image
-img: assets/img/12.jpg
+title: Dexterous Manipulation with Tactile Information
+description: 
+img: assets/img/xela_allegro.png
 importance: 1
 category: work
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+This is a dexterous manipulation project by mainly using tactile sensors. 
+Our setup consists of a Kinova robotic arm and Allegro hand integrated with Xela touch sensors. With this setup we use VR headsets to control both the kinova arm and allegro hand to colelct demonstrations. Then use self-supervised learning algorithms to learn a good representation of the environment. Representations can help us completing tasks with non-parametric imitation learning algorithms. 
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Engineering for the Kinova arm and Allegro hand is done by using [Holo-Dex](https://holo-dex.github.io/) framework. 
+Xela sensors are integrated to this framework. Even though the code is not public for that yet, it will be soon.
+An example demonstration with this setup could be found [here](https://youtu.be/0eiDZCP46CQ).
+
+Learning codes of this setup is public in [tactile-learning](https://github.com/irmakguzey/tactile-learning) github repo. 
+Main contribution of this project is to use self-supervised learning algorithms to learn tactile representations.
+
+
+<!-- To give your project a background in the portfolio page, just add the img tag to the front matter like so:
 
     ---
     layout: page
@@ -77,4 +84,4 @@ Here's the code for the last row of images above:
     </div>
 </div>
 ```
-{% endraw %}
+{% endraw %} -->
