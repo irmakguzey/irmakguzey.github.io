@@ -6,7 +6,7 @@ description: These are the research and engineering projects that I have been in
 nav: true
 nav_order: 3
 display_categories: [work]
-horizontal: true
+horizontal: false
 ---
 
 <!-- pages/projects.md -->
