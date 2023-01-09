@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 6
-description: a project with no image
-img:
+title: hpwgnn
+description: Human Motion Prediction with Graph Neural Networks
+img: assets/img/publication_review/hmpwgnn.gif
 importance: 4
-category: fun
+category: work
 ---
 
 Every project has a beautiful feature showcase page.
