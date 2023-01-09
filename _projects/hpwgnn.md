@@ -1,8 +1,8 @@
 ---
 layout: page
-title: graph neural networks
+title: Graph Neural Networks
 description: Human Motion and Tower Stability Prediction with Graph Neural Networks
-img: assets/img/publication_review/hmpwgnn.gif
+img: assets/img/hmpwgnn.png
 importance: 4
 category: work
 ---
