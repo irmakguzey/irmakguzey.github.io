@@ -9,9 +9,8 @@ profile:
   image: profile_photo.jpg
   image_circular: true # crops the image to make it circular
   address: >
-    <p>ig2283@nyu.edu</p>
-    <p>3544 Broadway Apt 28</p>
-    <p>New York, NY, 10031, United States</p>
+    <p>irmakguzey@nyu.edu</p>
+    <p>New York, NY, United States</p>
 
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
