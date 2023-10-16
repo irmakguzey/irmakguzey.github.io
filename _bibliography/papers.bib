@@ -3,11 +3,62 @@
 
 @string{aps = {American Physical Society,}}
 
+@article{guzey2023see,
+  title={See to Touch: Learning Tactile Dexterity through Visual Incentives},
+  author={Guzey, Irmak and Dai, Yinlong and Evans, Ben and Chintala, Soumith and Pinto, Lerrel},
+  url={https://arxiv.org/abs/2309.12300},
+  html={https://arxiv.org/abs/2309.12300},
+  abstract={Equipping multi-fingered robots with tactile sensing is crucial for achieving the precise,
+  contact-rich, and dexterous manipulation that humans excel at. However, relying solely on tactile sensing
+  fails to provide adequate cues for reasoning about objects' spatial configurations, limiting the
+  ability to correct errors and adapt to changing situations. In this paper, we present Tactile Adaptation
+  from Visual Incentives (TAVI), a new framework that enhances tactile-based dexterity by optimizing
+  dexterous policies using vision-based rewards. First, we use a contrastive-based objective to learn
+  visual representations. Next, we construct a reward function using these visual representations
+  through optimal-transport based matching on one human demonstration. Finally, we use online reinforcement
+  learning on our robot to optimize tactile-based policies that maximize the visual reward. On six
+  challenging tasks, such as peg pick-and-place, unstacking bowls, and flipping slender objects,
+  TAVI achieves a success rate of 73\% using our four-fingered Allegro robot hand. The increase in
+  performance is 108\% higher than policies using tactile and vision-based rewards and 135\% higher
+  than policies without tactile observational input.},
+  pdf={tavi.pdf},
+  website={https://see-to-touch.github.io/},
+  preview={tavi.gif},
+  selected={true},
+  year={2023}
+}
+
+@article{guzey2023dexterity,
+  title={Dexterity from Touch: Self-Supervised Pre-Training of Tactile Representations with Robotic Play},
+  author={Guzey, Irmak and Evans, Ben and Chintala, Soumith and Pinto, Lerrel},
+  url={https://arxiv.org/abs/2303.12076},
+  html={https://arxiv.org/abs/2303.12076},
+  abstract={Teaching dexterity to multi-fingered robots has been a longstanding challenge in robotics.
+  Most prominent work in this area focuses on learning controllers or policies that either operate
+  on visual observations or state estimates derived from vision. 
+  However, such methods perform poorly on fine-grained manipulation tasks that require
+  reasoning about contact forces or about objects occluded by the hand itself.
+  In this work, we present T-Dex, a new approach for tactile-based dexterity,
+  that operates in two phases. In the first phase, we collect 2.5 hours of play data,
+  which is used to train self-supervised tactile encoders. This is necessary to bring high-dimensional
+  tactile readings to a lower-dimensional embedding. In the second phase, given a handful of
+  demonstrations for a dexterous task, we learn non-parametric policies that combine the tactile
+  observations with visual ones. Across five challenging dexterous tasks, we show that our tactile-based
+  dexterity models outperform purely vision and torque-based models by an average of 1.7X.
+  Finally, we provide a detailed analysis on factors critical to T-Dex including the importance of
+  play data, architectures, and representation learning.},
+  pdf={tdex.pdf},
+  website={https://tactile-dexterity.github.io/},
+  preview={tdex.gif},
+  selected={true},
+  year={2023}
+}
+
 @article{arunachalam2022holo,
   title={Holo-Dex: Teaching Dexterity with Immersive Mixed Reality},
   author={Arunachalam, Sridhar Pandian and Guzey, Irmak and Chintala, Soumith and Pinto, Lerrel},
-  url={https://arxiv.org/pdf/2210.06463.pdf},
-  html={https://arxiv.org/pdf/2210.06463.pdf},
+  url={https://arxiv.org/abs/2210.06463},
+  html={https://arxiv.org/abs/2210.06463},
   abstract={A fundamental challenge in teaching robots is to
 provide an effective interface for human teachers to demonstrate useful skills to a robot. This challenge is exacerbated
 in dexterous manipulation, where teaching high-dimensional,

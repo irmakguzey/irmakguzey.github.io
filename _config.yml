@@ -6,7 +6,7 @@ title: Irmak Guzey # the website title (if blank, full name will be used instead
 first_name: Irmak
 middle_name: 
 last_name: Guzey
-email: ig2283@nyu.edu
+email: irmakguzey@nyu.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A graduate research assistant in New York University. I am interested in robot learning and computer vision.
 # footer_text: >
