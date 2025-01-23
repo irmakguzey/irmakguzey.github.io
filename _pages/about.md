@@ -6,7 +6,7 @@ subtitle: PhD student in Computer Science, New York University (she/her)
 
 profile:
   align: right
-  image: profile_photo.jpg
+  image: profile_photo2.jpeg
   image_circular: true # crops the image to make it circular
   address: >
     <p>irmakguzey@nyu.edu</p>
