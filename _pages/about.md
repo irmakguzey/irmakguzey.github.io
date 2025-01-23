@@ -21,6 +21,6 @@ I am currently a first year PhD student in Computatinal Intelligence, Vision, an
 
 I had my master's degree from New York University, Computer Science at Courant Institute of Mathematical Sciences. I was awarded with a Fulbright scholarship in 2020. 
 
-My research mostly focus on *Policy Learning* and *Representation Learning*. I enjoy working on tackling different tasks in Manipulation and Navigation in Robotics.
+My research mostly focus on learning driven dexterous manipulation. I enjoy working on reinforcement and imitation learning to tackle various problems in this area.
 
-On top of my research, with my interest in Robotics and Machine Learning, I worked as a full-time robotics engineer in [DOF Robotics](https://dofrobotics.com/) for a year, had an internship in [X](https://x.company/) - the Moonshot Factory and 2 different internships in [Google](https://about.google/), one of them being purely on machine learning.
+On top of my research, with my interest in robotics and machine learning, I worked as a full-time robotics engineer in [DOF Robotics](https://dofrobotics.com/) for a year, had an internship in [X](https://x.company/) - the Moonshot Factory and 2 different internships in [Google](https://about.google/), one of them being purely on machine learning.
