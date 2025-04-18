@@ -23,9 +23,10 @@
 # end
 source 'https://rubygems.org'
 
-# ruby '~> 3.2.0'  # Use a more recent Ruby version
+ruby '~> 3.2.0'  # Use a more recent Ruby version
 # gem 'bundler', '~> 2.4.0'  # Use a compatible bundler version
-gem 'jekyll'
+gem 'jekyll', '~> 3.10.0'
+gem 'github-pages', '~> 232', group: :jekyll_plugins
 gem 'uri', '>= 0', require: false
 
 # Core plugins that directly affect site building
@@ -43,7 +44,7 @@ group :jekyll_plugins do
     gem 'jekyll-scholar'
     gem 'jekyll-sitemap'
     gem 'jekyll-tabs'
-    gem 'jekyll-terser', :git => "https://github.com/RobertoJBeltran/jekyll-terser.git"
+    gem 'jekyll-terser', github: 'RobertoJBeltran/jekyll-terser'
     gem 'jekyll-toc'
     gem 'jekyll-twitter-plugin'
     gem 'jemoji'
