@@ -26,6 +26,7 @@ source 'https://rubygems.org'
 # ruby '~> 3.2.0'  # Use a more recent Ruby version
 # gem 'bundler', '~> 2.4.0'  # Use a compatible bundler version
 gem 'jekyll'
+gem 'uri', '>= 0', require: false
 
 # Core plugins that directly affect site building
 group :jekyll_plugins do
