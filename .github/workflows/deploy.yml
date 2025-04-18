@@ -1,38 +1,49 @@
-# .github/workflows/deploy.yml
 
-name: Build and Deploy Jekyll
+name: deploy
 
 on:
   push:
     branches:
-      - master  # or "master" depending on your default branch
+      - master
+      - main
+  pull_request:
+    branches:
+      - master
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
-  build:
+  deploy:
+    # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v3
-
-    - name: Set up Ruby
+    - name: Checkout 🛎️
+      uses: actions/checkout@v3
+    - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.1'
-    
-    - name: Install ImageMagick
-      run: sudo apt-get update && sudo apt-get install -y imagemagick
-
-    - name: Install dependencies
-      run: |
-        gem install bundler
-        bundle install
-
-    - name: Build site
-      run: bundle exec jekyll build
-
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
+        ruby-version: '2.7.5'
+        bundler-cache: true
+    - name: Update _config.yml ⚙️
+      uses: fjogeleit/yaml-update-action@v0.13.1
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_site
-
+        commitChange: false
+        valueFile: '_config.yml'
+        propertyPath: 'giscus.repo'
+        value: ${{ github.repository }}
+    - name: Install and Build 🔧
+      run: |
+        pip3 install --upgrade jupyter
+        npm install -g mermaid.cli
+        npm install -g purgecss
+        export JEKYLL_ENV=production
+        bundle exec jekyll build --lsi
+        purgecss -c purgecss.config.js
+    - name: Deploy 🚀
+      if: github.event_name != 'pull_request'
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: _site
