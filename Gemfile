@@ -23,7 +23,7 @@
 # end
 source 'https://rubygems.org'
 
-ruby '~> 3.2.0'  # Use a more recent Ruby version
+# ruby '~> 3.2.0'  # Use a more recent Ruby version
 # gem 'bundler', '~> 2.4.0'  # Use a compatible bundler version
 gem 'jekyll', '~> 3.10.0'
 gem 'github-pages', '~> 232', group: :jekyll_plugins
