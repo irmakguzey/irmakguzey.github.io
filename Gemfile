@@ -23,8 +23,8 @@
 # end
 source 'https://rubygems.org'
 
-ruby '~> 3.2.0'  # Use a more recent Ruby version
-gem 'bundler', '~> 2.4.0'  # Use a compatible bundler version
+# ruby '~> 3.2.0'  # Use a more recent Ruby version
+# gem 'bundler', '~> 2.4.0'  # Use a compatible bundler version
 gem 'jekyll'
 
 # Core plugins that directly affect site building
