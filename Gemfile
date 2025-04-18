@@ -28,6 +28,7 @@ source 'https://rubygems.org'
 gem 'jekyll', '~> 3.10.0'
 gem 'github-pages', '~> 232', group: :jekyll_plugins
 gem 'uri', '>= 0', require: false
+gem 'bibtex-ruby', '~> 5.0'
 
 # Core plugins that directly affect site building
 group :jekyll_plugins do
