@@ -4,4 +4,4 @@ date: 2025-12-20
 inline: true
 ---
 
-[AINA](https://aina-robot.github.io) code is released! Give it a try to learn robot policies from human videos. 
+[AINA](https://aina-robot.github.io) got accepted to [ICRA 2026](https://2026.ieee-icra.org), see you at Vienna!  
