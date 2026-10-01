@@ -1,1 +1,0 @@
-This is the github repo that I used to create my website https://irmakguzey.github.io . The template is taken from: https://github.com/alshedivat/al-folio . 
