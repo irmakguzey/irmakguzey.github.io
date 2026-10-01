@@ -18,7 +18,7 @@ jobs:
     - name: Assemble site
       run: |
         mkdir _site
-        cp -r index.html style.css script.js robots.txt .nojekyll assets _site/
+        cp -r index.html style.css script.js favicon.ico robots.txt .nojekyll assets _site/
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4
       with:
