@@ -1,0 +1,57 @@
+[
+  {
+    "owner": "facebookresearch",
+    "name": "AINA",
+    "url": "https://github.com/facebookresearch/AINA",
+    "description": "Official implementation of Dexterity from Smart Lenses Multi-Fingered Robot Manipulation with In-the-Wild Human Demonstrations. Project website https://aina-robot.github.io/. ",
+    "homepage": "https://aina-robot.github.io/",
+    "stars": 58,
+    "forks": 4,
+    "language": "Python",
+    "languageColor": "#3572A5"
+  },
+  {
+    "owner": "ruka-hand",
+    "name": "RUKA",
+    "url": "https://github.com/ruka-hand/RUKA",
+    "description": "Official implementation for the project RUKA: Rethinking the Design of Humanoid Hands with Learning. Project Website: https://ruka-hand.github.io ",
+    "homepage": "",
+    "stars": 201,
+    "forks": 29,
+    "language": "Python",
+    "languageColor": "#3572A5"
+  },
+  {
+    "owner": "irmakguzey",
+    "name": "object-rewards",
+    "url": "https://github.com/irmakguzey/object-rewards",
+    "description": "Official implementation of the project HuDOR: Bridging the Human to Robot Dexterity Gap through Object-Oriented Rewards project. Website: https://object-rewards.github.io ",
+    "homepage": "",
+    "stars": 38,
+    "forks": 3,
+    "language": "Python",
+    "languageColor": "#3572A5"
+  },
+  {
+    "owner": "irmakguzey",
+    "name": "tactile-dexterity",
+    "url": "https://github.com/irmakguzey/tactile-dexterity",
+    "description": "Official implementation of Dexterity from Touch: Self-Supervised Pre-Training of Tactile Representations with Robotic Play.",
+    "homepage": "",
+    "stars": 72,
+    "forks": 9,
+    "language": "Python",
+    "languageColor": "#3572A5"
+  },
+  {
+    "owner": "irmakguzey",
+    "name": "see-to-touch",
+    "url": "https://github.com/irmakguzey/see-to-touch",
+    "description": "Code base for See to Touch project: https://see-to-touch.github.io/",
+    "homepage": "",
+    "stars": 54,
+    "forks": 7,
+    "language": "Python",
+    "languageColor": "#3572A5"
+  }
+]
