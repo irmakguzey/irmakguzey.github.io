@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - master
+  schedule:
+    - cron: "0 6 * * *"  # daily, to refresh the pinned repos
   workflow_dispatch:
 
 permissions:
@@ -19,6 +21,12 @@ jobs:
       run: |
         mkdir _site
         cp -r index.html style.css script.js favicon.ico robots.txt .nojekyll assets _site/
+    - name: Fetch pinned repos
+      # if this fails the page keeps the fallback cards written in index.html
+      continue-on-error: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: python3 .github/scripts/fetch_pinned.py _site/pinned.json
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4
       with:

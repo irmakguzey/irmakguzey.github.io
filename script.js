@@ -75,3 +75,57 @@ function showPubs(mode) {
   overlay.addEventListener("click", close);
   document.addEventListener("keydown", e => { if (e.key === "Escape") close(); });
 })();
+
+// open-source projects: render my pinned GitHub repos from pinned.json, which the deploy
+// workflow regenerates daily; the cards already in the HTML stay if the file is missing
+(function () {
+  const grid = document.getElementById("project-grid");
+  if (!grid) return;
+  // repos that have a paper preview on this page; others use GitHub's generated card image
+  const thumbs = {
+    "facebookresearch/AINA": "aina.gif",
+    "ruka-hand/RUKA": "ruka.gif",
+    "irmakguzey/object-rewards": "hudor.gif",
+    "irmakguzey/see-to-touch": "tavi.gif",
+    "irmakguzey/tactile-dexterity": "tdex.gif",
+  };
+  // project sites for repos whose GitHub page doesn't list one
+  const sites = {
+    "irmakguzey/tactile-dexterity": "https://tactile-dexterity.github.io/",
+  };
+  const esc = t => String(t ?? "").replace(/[&<>"']/g, c =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+  function card(r) {
+    const full = `${r.owner}/${r.name}`;
+    const desc = r.description || "";
+    // the project site is the repo homepage, or else the first link in its description
+    const site = r.homepage || sites[full] || (desc.match(/https?:\/\/[^\s)]+/) || [""])[0].replace(/[.,]$/, "");
+    const cleanDesc = desc
+      .replace(/\s*(project\s+)?website:?\s*https?:\/\/\S+/gi, "")
+      .replace(/[:\s]*https?:\/\/\S+/g, "")
+      .trim();
+    const img = thumbs[full]
+      ? `assets/img/publication_preview/${thumbs[full]}`
+      : `https://opengraph.githubassets.com/1/${full}`;
+    const lang = r.language
+      ? `<span><span class="lang-dot" style="background:${esc(r.languageColor || "#888")}"></span>${esc(r.language)}</span>`
+      : "";
+    return `<div class="project-card">
+      <a class="project-thumb" href="${esc(r.url)}" target="_blank" rel="noopener"><img src="${esc(img)}" alt="${esc(r.name)}" loading="lazy"></a>
+      <div class="project-info">
+        <div class="project-title"><a href="${esc(r.url)}" target="_blank" rel="noopener"><span class="project-owner">${esc(r.owner)}/</span>${esc(r.name)}</a></div>
+        ${cleanDesc ? `<p class="project-desc">${esc(cleanDesc)}</p>` : ""}
+        <div class="project-meta">${lang}<span><i class="fa-regular fa-star"></i> ${r.stars}</span><span><i class="fa-solid fa-code-fork"></i> ${r.forks}</span></div>
+        <div class="pub-links"><a href="${esc(r.url)}" target="_blank" rel="noopener">Code</a>${site ? `<a href="${esc(site)}" target="_blank" rel="noopener">Website</a>` : ""}</div>
+      </div>
+    </div>`;
+  }
+
+  fetch("pinned.json", { cache: "no-cache" })
+    .then(res => (res.ok ? res.json() : Promise.reject()))
+    .then(repos => {
+      if (Array.isArray(repos) && repos.length) grid.innerHTML = repos.map(card).join("");
+    })
+    .catch(() => {});
+})();
