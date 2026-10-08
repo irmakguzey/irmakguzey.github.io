@@ -180,15 +180,25 @@ section { scroll-margin-top: 24px; }
 
 /* ---------- News ---------- */
 .news-wrap { position: relative; }
-.news-wrap.collapsed { max-height: 130px; overflow: hidden; }
+/* collapsed lists scroll in place; "Show more" expands them fully */
+.news-wrap.collapsed {
+  max-height: 130px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+/* sticky so it stays on the box's bottom edge while the list scrolls */
 .news-fade {
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
+  position: sticky;
+  bottom: 0;
   height: 56px;
+  margin-top: -56px;
   pointer-events: none;
   background: linear-gradient(to bottom, rgba(var(--bg-rgb), 0), var(--bg));
+  transition: opacity 0.2s;
 }
 .news-wrap:not(.collapsed) .news-fade { display: none; }
+.news-wrap.at-end .news-fade { opacity: 0; }
 .news-toggle {
   border: none;
   background: transparent;

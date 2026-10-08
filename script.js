@@ -4,12 +4,17 @@ function toggleMore(btn) {
   btn.textContent = collapsed ? "Show more" : "Show less";
 }
 
-// drop the "Show more" button on lists short enough to fit when collapsed
 document.querySelectorAll(".news-wrap.collapsed").forEach(wrap => {
+  // drop the "Show more" button on lists short enough to fit when collapsed
   if (wrap.scrollHeight <= wrap.clientHeight + 4) {
     wrap.classList.remove("collapsed");
     wrap.nextElementSibling.hidden = true;
+    return;
   }
+  // hide the bottom fade once the list is scrolled to its end
+  wrap.addEventListener("scroll", () => {
+    wrap.classList.toggle("at-end", wrap.scrollTop + wrap.clientHeight >= wrap.scrollHeight - 2);
+  }, { passive: true });
 });
 
 function toggleBib(btn) {
