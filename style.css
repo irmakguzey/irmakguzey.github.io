@@ -11,6 +11,8 @@
   --code-bg: #f5f7f9;
   --muted: #888;
   --on-accent: #fff;
+  --scroll-thumb: #d3d8de;
+  color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -25,6 +27,8 @@
     --code-bg: #1d2228;
     --muted: #8a939c;
     --on-accent: #16191d;
+    --scroll-thumb: #3a424b;
+    color-scheme: dark;
   }
 }
 
@@ -185,8 +189,12 @@ section { scroll-margin-top: 24px; }
   max-height: 130px;
   overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: var(--border) transparent;
+  scrollbar-color: var(--scroll-thumb) transparent;
 }
+/* Safari ignores scrollbar-color: draw a thin thumb on a transparent track */
+.news-wrap.collapsed::-webkit-scrollbar { width: 6px; background: transparent; }
+.news-wrap.collapsed::-webkit-scrollbar-track { background: transparent; }
+.news-wrap.collapsed::-webkit-scrollbar-thumb { background: var(--scroll-thumb); border-radius: 3px; }
 /* sticky so it stays on the box's bottom edge while the list scrolls */
 .news-fade {
   position: sticky;
