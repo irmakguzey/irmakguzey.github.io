@@ -335,6 +335,7 @@ section { scroll-margin-top: 24px; }
 }
 .two-col .news .date { width: 72px; }
 .nw { white-space: nowrap; }
+.news-section .news-wrap.collapsed { max-height: 260px; }
 .two-col .news-wrap.collapsed { max-height: 190px; }
 
 /* ---------- Open-source projects ---------- */
@@ -523,6 +524,7 @@ section { scroll-margin-top: 24px; }
   .news li { flex-direction: column; gap: 2px; }
   .news .date, .two-col .news .date { width: auto; }
   .news-wrap.collapsed { max-height: 220px; }
+  .news-section .news-wrap.collapsed { max-height: 440px; }
   .two-col { grid-template-columns: 1fr; gap: 0; }
   .project-grid { grid-template-columns: 1fr; }
   .exp-list::before, .exp-entry::after { display: none; }
