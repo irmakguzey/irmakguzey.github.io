@@ -1,33 +1,35 @@
 /* Design adapted from kevinywu.github.io, with the pinned sidebar from meganrichards3.github.io */
 :root {
-  --bg: #fdfdfd;
-  --bg-rgb: 253, 253, 253;
-  --text: #2c3c4c;
-  --heading: #334455;
-  --link: #2471a3;
-  --link-hover: #f09228;
-  --border: #e0e0e0;
-  --hover-bg: #eef4fb;
-  --code-bg: #f5f7f9;
-  --muted: #888;
+  --bg: #fdf9f0;
+  --bg-rgb: 253, 249, 240;
+  --text: #3b3229;
+  --heading: #3d2b1f;
+  --link: #6b3e1f;
+  --link-hover: #b5651d;
+  --border: #e8dfcf;
+  --hover-bg: #f6eedf;
+  --code-bg: #f7f1e5;
+  --muted: #8a7f72;
   --on-accent: #fff;
-  --scroll-thumb: #d3d8de;
+  --scroll-thumb: #ddd2bf;
+  --art-opacity: 0.6;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #16191d;
-    --bg-rgb: 22, 25, 29;
-    --text: #d0d6dd;
-    --heading: #e6ebf0;
-    --link: #6cb2e6;
-    --link-hover: #f5a54a;
-    --border: #2e343b;
-    --hover-bg: #1f262e;
-    --code-bg: #1d2228;
-    --muted: #8a939c;
-    --on-accent: #16191d;
-    --scroll-thumb: #3a424b;
+    --bg: #1c1814;
+    --bg-rgb: 28, 24, 20;
+    --text: #ddd3c6;
+    --heading: #efe6da;
+    --link: #d4a373;
+    --link-hover: #e9b872;
+    --border: #352d25;
+    --hover-bg: #2a231c;
+    --code-bg: #241e18;
+    --muted: #9a8f82;
+    --on-accent: #1c1814;
+    --scroll-thumb: #463c31;
+    --art-opacity: 0.22;
     color-scheme: dark;
   }
 }
@@ -37,6 +39,7 @@
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 
 body {
+  position: relative;
   margin: 0;
   background: var(--bg);
   color: var(--text);
@@ -454,6 +457,7 @@ section { scroll-margin-top: 24px; }
 .footer {
   margin-top: 56px;
   padding-top: 16px;
+  padding-bottom: 72px;
   border-top: 1px solid var(--border);
   font-size: 0.85em;
   color: var(--muted);
@@ -490,6 +494,61 @@ section { scroll-margin-top: 24px; }
 .lightbox.open img { opacity: 1; transform: scale(1); }
 
 /* ---------- Responsive ---------- */
+/* ---------- Painted background ---------- */
+.bg-art {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+.bg-art .art {
+  position: absolute;
+  height: auto;
+  opacity: var(--art-opacity);
+  overflow: visible;
+}
+.bg-art .art:has(use[href="#hot-air-balloon"]) { aspect-ratio: 100 / 150; }
+.bg-art .art:has(use[href="#party-balloon"])   { aspect-ratio: 60 / 150; }
+.bg-art .art:has(use[href="#round-tree"])      { aspect-ratio: 100 / 140; }
+.bg-art .art:has(use[href="#pine-tree"])       { aspect-ratio: 80 / 140; }
+.bg-art .art:has(use[href="#dog"])             { aspect-ratio: 120 / 90; }
+.bg-art .art:has(use[href="#dog-sit"])         { aspect-ratio: 100 / 110; }
+.bg-art .art:has(use[href="#cat-sit"])         { aspect-ratio: 80 / 100; }
+.bg-art .art:has(use[href="#cat-walk"])        { aspect-ratio: 110 / 80; }
+.fur-tan    { --fur: #e0b57e; --fur-dark: #a8703f; }
+.fur-brown  { --fur: #a87a55; --fur-dark: #6e4a2f; }
+.fur-grey   { --fur: #b9b2a8; --fur-dark: #7e766c; }
+.fur-orange { --fur: #e9a86a; --fur-dark: #b56f3a; }
+
+/* balloons bob, trees sway, sitting pets breathe, one dog paces back and forth */
+.float      { animation: float 9s ease-in-out infinite alternate; }
+.float-slow { animation: float 13s ease-in-out infinite alternate; }
+.sway       { animation: sway 6s ease-in-out infinite alternate; transform-origin: 50% 100%; }
+.breathe    { animation: breathe 3.2s ease-in-out infinite alternate; transform-origin: 50% 100%; }
+.pace       { animation: pace 18s linear infinite, bob 0.35s ease-in-out infinite alternate; }
+@keyframes float   { from { transform: translate(0, 0) rotate(-2deg); } to { transform: translate(14px, -38px) rotate(3deg); } }
+@keyframes sway    { from { transform: rotate(-1.5deg); } to { transform: rotate(1.5deg); } }
+@keyframes breathe { to { transform: scaleY(1.03); } }
+@keyframes bob     { to { translate: 0 -3px; } }
+@keyframes pace {
+  0%   { transform: translateX(0) scaleX(-1); }
+  46%  { transform: translateX(-140px) scaleX(-1); }
+  50%  { transform: translateX(-140px) scaleX(1); }
+  96%  { transform: translateX(0) scaleX(1); }
+  100% { transform: translateX(0) scaleX(-1); }
+}
+.chase { position: absolute; left: 0; right: 0; bottom: 6px; height: 70px; }
+.chase .runner {
+  bottom: 0;
+  left: 0;
+  animation: run 26s linear infinite, bob 0.3s ease-in-out infinite alternate;
+}
+@keyframes run { from { transform: translateX(-120px); } to { transform: translateX(calc(100vw + 40px)); } }
+@media (prefers-reduced-motion: reduce) { .bg-art .art { animation: none; } }
+/* on narrow screens the leaves sit behind text, so keep them faint */
+@media (max-width: 900px) { .bg-art .art { opacity: calc(var(--art-opacity) * 0.5); scale: 0.7; } }
+
 @media (max-width: 900px) {
   .layout {
     grid-template-columns: minmax(0, 1fr);
