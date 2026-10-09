@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css">
   <link rel="stylesheet" href="style.css">
+  <!-- apply a saved dark-mode choice before the page paints, so it doesn't flash light first -->
+  <script>try { if (localStorage.getItem("theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch (e) {}</script>
 </head>
 <body>
   <!-- painted background: watercolor balloons, trees, cats and dogs (pure SVG, no image files) -->
@@ -163,6 +165,7 @@
         <a href="https://www.linkedin.com/in/irmak-guzey-6a9010175" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
         <a href="https://x.com/irmakkguzey" target="_blank" rel="noopener" title="X"><i class="fa-brands fa-x-twitter"></i></a>
         <a href="assets/pdf/CV.pdf" target="_blank" rel="noopener" title="CV"><i class="ai ai-cv"></i></a>
+        <button class="theme-toggle" type="button" onclick="toggleTheme()" title="Dark mode" aria-label="Dark mode"><i class="fa-solid fa-moon"></i></button>
       </div>
     </div>
   </div>
@@ -181,6 +184,7 @@
           <li><a href="https://www.linkedin.com/in/irmak-guzey-6a9010175" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin"></i><span>LinkedIn</span></a></li>
           <li><a href="https://x.com/irmakkguzey" target="_blank" rel="noopener" title="X"><i class="fa-brands fa-x-twitter"></i><span>X / Twitter</span></a></li>
           <li><a href="assets/pdf/CV.pdf" target="_blank" rel="noopener" title="CV"><i class="ai ai-cv"></i><span>CV</span></a></li>
+          <li><button class="theme-toggle" type="button" onclick="toggleTheme()" title="Dark mode" aria-label="Dark mode"><i class="fa-solid fa-moon"></i><span>Dark mode</span></button></li>
         </ul>
         <nav class="sidebar-sections">
           <a href="#news">News</a>

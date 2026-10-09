@@ -17,6 +17,26 @@ document.querySelectorAll(".news-wrap.collapsed").forEach(wrap => {
   }, { passive: true });
 });
 
+// light/dark switch; the choice is remembered in this browser (the inline script in <head> applies it on load)
+function setThemeButtons(dark) {
+  document.querySelectorAll(".theme-toggle").forEach(btn => {
+    const label = dark ? "Light mode" : "Dark mode";
+    btn.title = label;
+    btn.setAttribute("aria-label", label);
+    btn.querySelector("i").className = dark ? "fa-solid fa-sun" : "fa-solid fa-moon";
+    const span = btn.querySelector("span");
+    if (span) span.textContent = label;
+  });
+}
+function toggleTheme() {
+  const dark = document.documentElement.dataset.theme !== "dark";
+  if (dark) document.documentElement.dataset.theme = "dark";
+  else delete document.documentElement.dataset.theme;
+  try { localStorage.setItem("theme", dark ? "dark" : "light"); } catch (e) {}
+  setThemeButtons(dark);
+}
+setThemeButtons(document.documentElement.dataset.theme === "dark");
+
 function toggleBib(btn) {
   const pre = btn.closest(".pub-body").querySelector(".bibtex");
   pre.hidden = !pre.hidden;
