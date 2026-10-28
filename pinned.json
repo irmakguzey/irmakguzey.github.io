@@ -5,7 +5,7 @@
     "url": "https://github.com/facebookresearch/AINA",
     "description": "Official implementation of Dexterity from Smart Lenses Multi-Fingered Robot Manipulation with In-the-Wild Human Demonstrations. Project website https://aina-robot.github.io/. ",
     "homepage": "https://aina-robot.github.io/",
-    "stars": 58,
+    "stars": 59,
     "forks": 4,
     "language": "Python",
     "languageColor": "#3572A5"
