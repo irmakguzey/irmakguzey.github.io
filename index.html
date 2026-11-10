@@ -150,7 +150,7 @@
       <section class="bio">
         <p>I am a PhD student in the Computational Intelligence, Vision, and Robotics Lab (<a href="https://wp.nyu.edu/cilvr/" target="_blank" rel="noopener">CILVR</a>) at <a href="https://cs.nyu.edu/" target="_blank" rel="noopener">NYU Courant</a>, where I am lucky to be advised by <a href="https://www.lerrelpinto.com/" target="_blank" rel="noopener">Lerrel Pinto</a>. My research focuses on data-driven dexterous manipulation for multi-fingered robot hands. Since task-specific robot data is hard to collect with multi-fingered hands, my work centers on three topics:</p>
         <ol class="thrusts">
-          <li>Learning by watching humans: <a href="https://aina-robot.github.io/" target="_blank" rel="noopener">AINA</a>, <a href="https://object-rewards.github.io/" target="_blank" rel="noopener">HuDOR</a>, <a href="https://grasping.io/" target="_blank" rel="noopener">HUG</a></li>
+          <li>Learning by watching humans: <a href="https://aina-robot.github.io/" target="_blank" rel="noopener">AINA</a>, <a href="https://object-rewards.github.io/" target="_blank" rel="noopener">HuDOR</a>, <a href="https://grasping.io/" target="_blank" rel="noopener">HUG</a>, <a href="https://steertuning.github.io/" target="_blank" rel="noopener">Steertuning</a></li>
           <li>Humanoid hand hardware and control that best mimic human hands: <a href="https://ruka-hand.github.io/" target="_blank" rel="noopener">RUKA</a>, <a href="https://ruka-hand-v2.github.io/" target="_blank" rel="noopener">RUKA-v2</a></li>
           <li>Visuo-tactile dexterous policy learning: <a href="https://tactile-dexterity.github.io/" target="_blank" rel="noopener">T-Dex</a>, <a href="https://see-to-touch.github.io/" target="_blank" rel="noopener">TAVI</a></li>
         </ol>
@@ -216,6 +216,27 @@
           <div class="pub-toggle">
             <button id="btn-selected" class="active" onclick="showPubs('selected')">Selected</button>
             <button id="btn-all" onclick="showPubs('all')">All</button>
+          </div>
+        </div>
+
+        <div class="publication">
+          <img class="pub-media" src="assets/img/publication_preview/steertuning.gif" alt="Steertuning" loading="lazy">
+          <div class="pub-body">
+            <div class="pub-title"><a href="https://steertuning.github.io/" target="_blank" rel="noopener">Steertuning Policies from a Few Human Videos</a></div>
+            <div class="pub-authors">Billy Yan, Isaac Tu*, Kelly Lee*, Blake Chang, Kenny Ma, Kanad Patel, Dhawal Kabra, Neer Patel, Kevin Wu, Lerrel Pinto, <span class="me">Irmak Guzey</span> <span class="eq-note">* equal contribution</span></div>
+            <div class="pub-venue">arXiv preprint, 2026</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2610.18711" target="_blank" rel="noopener">arXiv</a>
+              <a href="https://steertuning.github.io/" target="_blank" rel="noopener">Website</a>
+              <a href="https://github.com/billy-yibo-yan/steertuning_release" target="_blank" rel="noopener">Code</a>
+              <button class="bib-toggle" onclick="toggleBib(this)">BibTeX</button>
+            </div>
+            <pre class="bibtex" hidden>@article{yan2026steertuning,
+    title={Steertuning Policies from a Few Human Videos},
+    author={Billy Yan and Isaac Tu and Kelly Lee and Blake Chang and Kenny Ma and Kanad Patel and Dhawal Kabra and Neer Patel and Kevin Wu and Lerrel Pinto and Irmak Guzey},
+    journal={arXiv preprint arXiv:2610.18711},
+    year={2026}
+}</pre>
           </div>
         </div>
 
